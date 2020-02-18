@@ -73,8 +73,12 @@ $defaults: (
 
 /* Standalone variables
 ========================================================================== */
-$white-space: 1em;
+$white-space: 1rem;
 $form-control-height: 2rem;
 
+$gutter-large: 40px;
+$gutter-small: 20px;
+$gutter-mobile: 25px;
+// $mobile-gutter-small:
 $weight-bold: 700;
 $weight-regular: 400;

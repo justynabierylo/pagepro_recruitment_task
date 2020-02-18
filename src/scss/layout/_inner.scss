@@ -13,6 +13,8 @@
 
     @include media(mobile) {
         max-width: size(inner, tablet);
+        padding-left: $white-space;
+        padding-right: $white-space;
     }
 
     @include media(desktop) {
@@ -22,4 +24,32 @@
 
 .l-inner {
     @include inner;
+}
+
+.g-gutter-top {
+    padding-top: $gutter-large;
+}
+
+.g-gutter-bottom {
+    padding-bottom: $gutter-large;
+}
+
+.g-gutter-left {
+    padding-left: $gutter-mobile;
+
+    @include media(mobile) {
+        padding-left: $gutter-small;
+    }
+}
+
+.g-gutter-right {
+    padding-right: $gutter-mobile;
+
+    @include media(mobile) {
+        padding-right: $gutter-small;
+    }
+}
+
+.no-gutter {
+    padding: 0;
 }

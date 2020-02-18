@@ -1,12 +1,32 @@
 .c-main-article__box{
-    @include background-img('../img/Mountains@2x.jpg');
+    @include background-img("../img/Mountains@2x.jpg");
 
     .c-main-article__wrap{
         color: color(white);
-        padding: 30px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        margin: 0 auto;
+        max-width: size(inner, mobile);
+
+        @include media(mobile) {
+            max-width: 600px;
+        }
+    }
+}
+
+.c-main-article__heading{
+    font-size: font-size(large);
+    position: relative;
+    width: 100%;
+
+    :before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 1px;
+        background-color: color(white);
     }
 }
