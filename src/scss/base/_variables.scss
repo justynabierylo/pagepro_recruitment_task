@@ -49,12 +49,10 @@ $sizes: (
 
 // Set main font size to body (eg. 12px), then refer to it using rem, eg. secondary: 2rem -> 24px
 $font-sizes: (
-    main: 14px,
-    h1: 3rem,
-    h2: 2rem,
-    h3: 1.5rem,
-    small: 0.8rem,
-    quote: 9px
+    main: 16px,
+    large: 1.5rem,
+    medium: 0.8125rem,
+    small: 0.6875rem
 );
 
 $offsets: (
@@ -64,8 +62,8 @@ $offsets: (
 );
 
 $fonts: (
-    main: #{'Arial', sans-serif}
-    // secondary: 'Helvetica'
+    main: #{'Helvetica', 'Arial', sans-serif},
+    secondary: 'Acumin Pro'
 );
 
 $defaults: (

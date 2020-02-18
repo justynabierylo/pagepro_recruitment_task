@@ -94,3 +94,12 @@
         transform: scaleX(1);
     }
 }
+
+/* 4. Custom mixins
+========================================================================== */
+
+@mixin opacity-on-hover () {
+    :hover {
+        opacity: 50%;
+    }
+}
