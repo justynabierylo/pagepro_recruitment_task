@@ -103,3 +103,8 @@
         opacity: 50%;
     }
 }
+
+@mixin background-img ($bg-img) {
+    background: url($bg-img) no-repeat center center;
+    background-size: cover;
+}

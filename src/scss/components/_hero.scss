@@ -1,0 +1,12 @@
+.c-main-article__box{
+    @include background-img('../img/Mountains@2x.jpg');
+
+    .c-main-article__wrap{
+        color: color(white);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}

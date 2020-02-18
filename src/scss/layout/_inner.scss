@@ -6,14 +6,17 @@
     flex-direction: column;
 
     width: 100%;
-    max-width: size(inner, desktop);
+    max-width: size(inner, mobile);
     margin: 0 auto;
 
     vertical-align: baseline;
 
-    @include media(0, tablet) {
-        padding-right: $white-space;
-        padding-left: $white-space;
+    @include media(mobile) {
+        max-width: size(inner, tablet);
+    }
+
+    @include media(desktop) {
+        max-width: size(inner, desktop);
     }
 }
 
