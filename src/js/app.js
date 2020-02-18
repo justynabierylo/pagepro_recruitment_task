@@ -1,0 +1,15 @@
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+import svg4everybody from 'svg4everybody'
+
+svg4everybody()
+
+const hamburger = document.querySelector('.c-burger')
+const nav = document.querySelector('.c-main-nav__content')
+
+const handleClick = () => {
+  hamburger.classList.toggle('burger--active')
+  nav.classList.toggle('main-nav--active')
+}
+
+hamburger.addEventListener('click', handleClick)
