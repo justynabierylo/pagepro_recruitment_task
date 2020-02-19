@@ -13,8 +13,7 @@
 
     @include media(mobile) {
         max-width: size(inner, tablet);
-        padding-left: $white-space;
-        padding-right: $white-space;
+        // padding: $white-space;
     }
 
     @include media(desktop) {
@@ -42,10 +41,6 @@
 //     }
 // }
 
-// .no-gutter {
-//     padding: 0;
-// }
-
 @mixin col-names ($device) {
     @for $i from 1 through column($device) {
         &-#{$i}-#{$device} {
@@ -70,3 +65,12 @@
 .gr {
     @include grid;
 }
+
+
+.no-gutter {
+    padding: 0;
+}
+
+// .g-gutter-r-desktop {
+//     padding-right: gutter(desktop);
+// }

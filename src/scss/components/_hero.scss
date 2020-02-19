@@ -1,7 +1,53 @@
-.c-main-article__box{
+.l-hero {
+    width: 100%;
+    background-color: color(white);
+
+    .l-hero__wrap{
+        display: flex;
+        flex-direction: column;
+
+        @include media(desktop) {
+            flex-direction: row;
+        }
+    }
+}
+
+.u-full-bleed {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-55%);
+}
+
+.l-hero__bg {
+
+    position: absolute;
+    height: 100%;
+    padding: 0;
+
     @include background-img("../img/Mountains@2x.jpg");
 
-    .c-main-article__wrap{
+
+    // .c-bg__box {
+    //     @include media(desktop) {
+    //         position: absolute;
+    //         height: 100%;
+    //         width: 100vw;
+    //         z-index: -1;
+    //         @include background-img("../img/Mountains@2x.jpg");
+    //         @include media(desktop) {
+    //             right: 0px;
+    //         }
+    //     }
+
+    // }
+}
+
+
+.c-main-article__box {
+    // --articleWidth:
+    position: relative;
+
+    .c-main-article__wrap {
         color: color(white);
         display: flex;
         flex-direction: column;
