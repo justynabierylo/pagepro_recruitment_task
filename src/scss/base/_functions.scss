@@ -40,6 +40,18 @@
     @return get-map-value($fonts, $key);
 }
 
+@function gutter($key) {
+    @return get-map-value($gutters, $key);
+}
+
+@function column($key) {
+    @return get-map-value($columns, $key);
+}
+
+@function column-size($key) {
+    @return get-map-value($column-sizes, $key);
+}
+
 @function default($key) {
     @return get-map-value($defaults, $key);
 }
