@@ -108,3 +108,17 @@
     background: url($bg-img) no-repeat center center;
     background-size: cover;
 }
+
+@mixin underline-title () {
+    :before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: $underline-height;
+        background-color: color(white);
+        border-radius: $underline-height;
+        pointer-events: none;
+    }
+}

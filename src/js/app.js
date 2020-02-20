@@ -1,6 +1,7 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import svg4everybody from 'svg4everybody'
+import Swiper from 'swiper';
 
 svg4everybody()
 
@@ -13,3 +14,9 @@ const handleClick = () => {
 }
 
 hamburger.addEventListener('click', handleClick)
+
+// initialize Swiper
+var mySwiper = new Swiper('.swiper-container', {
+  speed: 400,
+  spaceBetween: 100
+})

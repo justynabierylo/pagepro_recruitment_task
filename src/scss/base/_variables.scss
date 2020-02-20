@@ -79,6 +79,12 @@ $column-sizes: (
     mobile: 64px
 );
 
+$site-margins: (
+    desktop: 120px,
+    tablet: 60px,
+    mobile: 12px
+);
+
 $fonts: (
     main: #{'Helvetica', 'Arial', sans-serif},
     secondary: 'Acumin Pro'
@@ -91,8 +97,9 @@ $defaults: (
 
 /* Standalone variables
 ========================================================================== */
-$white-space: 1rem;
+$white-space: 2.5rem; //40px
 $form-control-height: 2rem;
+$underline-height: 2px;
 
 $weight-bold: 700;
 $weight-regular: 400;

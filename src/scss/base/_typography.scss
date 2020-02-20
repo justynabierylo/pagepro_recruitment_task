@@ -50,9 +50,10 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: $weight-bold;
     text-transform: uppercase;
     background-color: color(pink);
-    padding: 16px 30px;
+    padding: 12px 38px;
     border-radius: 6px;
     opacity: 1;
+    line-height: 16px;
 
     :hover{
         opacity: 50%;
