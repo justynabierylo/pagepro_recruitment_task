@@ -38,7 +38,7 @@ module.exports = env => {
         {
           test: /\.js$/,
           loader: 'babel-loader',
-          exclude: /node_modules/,
+          exclude: /(node_modules|bower_components|node_modules\/(?!(dom7|ssr-window|swiper)\/).*)/,
           query: readBabelrcUp().then(result => result.babel)
         }
       ]

@@ -1,0 +1,41 @@
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    top: 10px;
+    color: color(black);
+    opacity: 0.3;
+    @include transition;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:after {
+        font-family: unset;
+        font-size: 0;
+        width: 6px;
+        height: 10px;
+    }
+}
+
+.swiper-button-prev {
+    left: auto;
+    right: 100px;
+
+    &:after {
+        @include background-img ("../img/svg/arrow.svg");
+        transform: rotate(180deg);
+    }
+}
+
+.swiper-button-next {
+    left: auto;
+    right: 80px;
+
+    &:after {
+        @include background-img ("../img/svg/arrow.svg");
+    }
+}
