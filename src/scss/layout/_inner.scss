@@ -37,9 +37,7 @@
         }
 
         &-offset-#{$i}-#{$device} {
-            // margin-left: 100% / column($device) * $i;
-            // padding: 0 (gutter($device)/2);
-            margin-left: calc( (100% / column($device) * $i) + gutter($device));
+            width: 100% / column($device) * $i;
         }
     }
 }

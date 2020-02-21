@@ -10,10 +10,20 @@
 .c-trend-news__wrap {
     margin-top: $white-space;
     margin-bottom: $white-space;
+    position: relative;
+
+    & .swiper-button-prev {
+        right: 60px;
+    }
+
+    & .swiper-button-next {
+        right: 20px;
+    }
 }
 
 .c-trend-news__heading {
     margin-bottom: $white-space;
+    position: relative;
 }
 
 .c-trend-news__card-box {
