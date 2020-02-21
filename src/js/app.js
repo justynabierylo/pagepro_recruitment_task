@@ -58,8 +58,6 @@ var mySwiper = new Swiper('#swiper-1', {
 
 var mySwiperSecond = new Swiper('#swiper-2', {
   speed: 600,
-  // loop: true,
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -77,7 +75,6 @@ var mySwiperSecond = new Swiper('#swiper-2', {
       slidesPerColumnFill: 'row',
 
       slidesPerView: 2
-      // spaceBetween: 20
     },
 
     1200: {

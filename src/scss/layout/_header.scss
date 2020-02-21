@@ -175,6 +175,7 @@
     margin-top: $white-space/2;
 
     @include media(mobile) {
+        margin-top: 0;
 
         &:hover > .c-main-nav__list--sub {
             display: flex;
