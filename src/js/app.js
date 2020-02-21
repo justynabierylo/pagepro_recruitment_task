@@ -7,13 +7,29 @@ svg4everybody()
 
 const hamburger = document.querySelector('.c-burger')
 const nav = document.querySelector('.c-main-nav__content')
+const footer = document.querySelector('.l-footer')
+const overlay = document.querySelector('.overlay')
 
-const handleClick = () => {
-  hamburger.classList.toggle('burger--active')
-  nav.classList.toggle('main-nav--active')
+// SIDE MENU MOBILE
+
+const handleOpen = () => {
+  nav.classList.add('c-main-nav--active')
+  footer.classList.add('l-footer--active')
+  overlay.classList.add('overlay--active')
+
+  document.body.style.overflowY = 'hidden'
 }
 
-hamburger.addEventListener('click', handleClick)
+const handleClose = () => {
+  nav.classList.remove('c-main-nav--active')
+  footer.classList.remove('l-footer--active')
+  overlay.classList.remove('overlay--active')
+
+  document.body.style.overflowY = 'scroll'
+}
+
+hamburger.addEventListener('click', handleOpen)
+overlay.addEventListener('click', handleClose)
 
 // initialize Swiper
 var mySwiper = new Swiper('#swiper-1', {
@@ -71,5 +87,3 @@ var mySwiperSecond = new Swiper('#swiper-2', {
   }
 
 })
-
-console.log(mySwiper)

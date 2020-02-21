@@ -4,3 +4,22 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    position: relative;
+}
+
+.overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    z-index: 101;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.2) 100%);
+}
+
+.overlay--active {
+    display: block;
+}

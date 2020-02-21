@@ -4,19 +4,43 @@
 .l-header {
     background-color: color(gray-3);
     height: 50px;
-    // position: absolute;
-    // top: 0px;
-    // left: 0px;
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 $white-space/2;
 }
+
 .l-header__box--logo{
     .c-logo{
         font-size: font-size(medium);
-        color: color(pink);
+
+        & span {
+            color: color(gray-1);
+            @include transition ();
+
+            &:hover {
+                color: color(black-2);
+            }
+
+            @include media(mobile) {
+                color: color(pink);
+
+                &:hover {
+                    color: darken(color(pink), 15%);
+                }
+            }
+        }
+    }
+
+    @include media(mobile) {
+        display: flex;
+        order: -1;
+        flex-grow: 1;
     }
 }
+
+// BURGER
 
 .c-burger {
     display: inline-block;
@@ -24,31 +48,27 @@
     background-color: transparent;
     border: 0;
     margin: 0;
-  }
+}
 
-  .c-burger, .navigation {
-    transition: transform .3s .1s ease-in-out;
-  }
-
-  .c-burger--active {
+.c-burger--active {
     transform: translatex(250px);
-  }
+}
 
-  .c-burger__box {
+.c-burger__box {
     width: 16px;
     height: 14px;
     display: inline-block;
     position: relative;
-  }
+}
 
-  @mixin burger-line {
+@mixin burger-line {
     height: 2px;
     background-color: color(black-2);
     position: absolute;
     border-radius: 1px;
-  }
+}
 
-  .c-burger__inner {
+.c-burger__inner {
     @include burger-line;
 
     width: 10px;
@@ -56,63 +76,113 @@
     top: 50%;
     z-index: 10;
     transform: translateY(-50%);
-    transition: background-color .1s .2s ease-in-out;
-  }
+}
 
-  .c-burger__inner::before,
-  .c-burger__inner::after {
+.c-burger__inner::before,
+.c-burger__inner::after {
     @include burger-line;
 
     content: '';
     width: 16px;
     left: 0;
-    transition: transform .2s .2s ease-in-out;
-  }
+}
 
-  .c-burger__inner::before {
+.c-burger__inner::before {
     top: -6px;
-  }
+}
 
-  .c-burger__inner::after {
+.c-burger__inner::after {
     top: 6px;
-  }
+}
 
-  .burger--active .c-burger__inner {
-    background-color: transparent;
-  }
+// MAIN NAV
 
-  .burger--active .c-burger__inner:before {
-    transform: translateY(6px) rotate(45deg);
-  }
+.c-main-nav__head {
+    @include media(mobile) {
+        display: none;
+    }
+}
 
-  .burger--active .c-burger__inner:after {
-    transform: translateY(-6px) rotate(-45deg);
-  }
-
-  .c-main-nav__content {
+.c-main-nav__content {
     height: 100vh;
-    width: 250px;
+    width: 287px;
     background-color: color(gray-3);
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateX(-250px);
-  }
+    transform: translateX(-287px);
+    z-index: 102;
+    transition: transform .3s .1s ease-in-out;
 
-  .main-nav--active {
+    @include media(mobile) {
+        position: static;
+        transform: translateX(0);
+        width: initial;
+        height: initial;
+        background-color: transparent;
+    }
+}
+
+.c-main-nav--active {
     transform: translateX(0px);
-  }
+}
 
-  .c-main-nav__list {
+.c-main-nav__list {
     margin-top: 50px;
     list-style: none;
-  }
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: $white-space;
 
-  .c-main-nav__item {
-    margin-bottom: 20px;
+    @include media(mobile) {
+        flex-direction: row;
+    }
+}
+
+.c-main-nav__item {
+    font-family: font(main);
+    font-size: font-size(small);
+    font-weight: $weight-bold;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding-left: $white-space/2;
+    position: relative;
+
+    &:hover > .c-main-nav__list--sub {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    & span {
+        color: color(gray-1);
+        @include transition ();
+
+        &:hover {
+            color: color(black-2);
+        }
+    }
 
     a {
-      text-decoration: none;
-    //   color: $dark;
+        text-decoration: none;
     }
-  }
+}
+
+// SUB NAV
+
+.c-main-nav__list--sub {
+    height: 0%;
+    display: none;
+    list-style: none;
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    top: 10px;
+
+    @include media(mobile) {
+        // position: absolute;
+    }
+}

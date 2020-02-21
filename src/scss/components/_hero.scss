@@ -35,10 +35,11 @@
 .u-full-bleed {
     width: 100vw;
     margin-left: 50%;
-    transform: translateX(-52%);
+    transform: translateX(-55%);
 
     @include media(desktop) {
         width: 70vw;
+        transform: translateX(-52%);
     }
 }
 

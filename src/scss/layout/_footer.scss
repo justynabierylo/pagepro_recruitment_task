@@ -2,7 +2,24 @@
    Footer
    ========================================================================== */
 .l-footer {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    width: 287px;
     background-color: color(gray-1);
+    transform: translateX(-287px);
+    z-index: 103;
+    transition: transform .3s .1s ease-in-out;
+
+    @include media(mobile) {
+        position: static;
+        transform: translateX(0);
+        width: 100%;
+    }
+}
+
+.l-footer--active {
+    transform: translateX(0px);
 }
 
 .l-footer__wrap {
@@ -35,7 +52,7 @@
 
     & span {
         opacity: 0.8;
-        @include transition;
+        @include transition ();
 
         &:hover {
             opacity: 1;
