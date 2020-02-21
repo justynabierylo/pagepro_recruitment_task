@@ -148,6 +148,7 @@
 }
 
 .c-main-news__card {
+    height: 50%;
     margin-bottom: $white-space;
 
     @include media(mobile) {

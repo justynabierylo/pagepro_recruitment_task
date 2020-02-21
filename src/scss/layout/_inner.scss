@@ -64,6 +64,7 @@
 
 .hide {
     @include hide-on;
+    display: none;
 }
 
 .show {
