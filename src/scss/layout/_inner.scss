@@ -5,22 +5,21 @@
     display: flex;
     flex-direction: column;
 
-    width: 100%;
-    // max-width: size(inner, mobile);
+    width: 100%;;
     margin: 0 auto;
-    padding-right: -15px;
-    padding-left: -15px;
+    padding-right: site-padding(mobile);
+    padding-left: site-padding(mobile);
 
     vertical-align: baseline;
 
     @include media(mobile) {
-        // max-width: size(inner, tablet);
+        padding-right: site-padding(tablet);
+        padding-left: site-padding(tablet);
     }
 
     @include media(desktop) {
-        // max-width: size(inner, desktop);
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-right: site-padding(desktop);
+        padding-left: site-padding(desktop);
     }
 }
 
@@ -32,7 +31,9 @@
     @for $i from 1 through column($device) {
         &-#{$i}-#{$device} {
             width: (100% / column($device)) * $i;
-            padding: 0 (gutter($device)/2);
+            padding-left: gutter($device)/2;
+            padding-right: gutter($device)/2;
+
         }
 
         &-offset-#{$i}-#{$device} {
@@ -46,7 +47,7 @@
 @mixin grid () {
     @include col-names(mobile);
 
-    @include media(tablet) {
+    @include media(mobile) {
         @include col-names(tablet);
     }
 
@@ -61,4 +62,12 @@
 
 .no-gutter {
     padding: 0;
+}
+
+.hide {
+    @include hide-on;
+}
+
+.show {
+    @include show-on;
 }

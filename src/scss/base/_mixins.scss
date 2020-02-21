@@ -109,7 +109,7 @@
     background-size: cover;
 }
 
-@mixin underline-title () {
+@mixin underline-title ($color) {
     :before {
         content: "";
         position: absolute;
@@ -117,8 +117,28 @@
         left: 0px;
         width: 100%;
         height: $underline-height;
-        background-color: color(white);
+        background-color: $color;
         border-radius: $underline-height;
         pointer-events: none;
+    }
+}
+
+@mixin hide-on {
+    @each $device, $bk in $breakpoints {
+        @media  (max-width: $bk - 1px) {
+            &-#{$device} {
+                display: none;
+            }
+        }
+    }
+}
+
+@mixin show-on {
+    @each $device, $bk in $breakpoints {
+        @media  (max-width: $bk - 1px) {
+            &-#{$device} {
+                display: initial;
+            }
+        }
     }
 }

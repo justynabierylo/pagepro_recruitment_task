@@ -52,8 +52,8 @@
     @return get-map-value($column-sizes, $key);
 }
 
-@function site-margin($key) {
-    @return get-map-value($site-margins, $key);
+@function site-padding($key) {
+    @return get-map-value($site-paddings, $key);
 }
 
 @function default($key) {

@@ -23,7 +23,7 @@
 
 .swiper-button-prev {
     left: auto;
-    right: 100px;
+    right: 40px;
 
     &:after {
         @include background-img ("../img/svg/arrow.svg");
@@ -33,7 +33,7 @@
 
 .swiper-button-next {
     left: auto;
-    right: 80px;
+    right: 0px;
 
     &:after {
         @include background-img ("../img/svg/arrow.svg");

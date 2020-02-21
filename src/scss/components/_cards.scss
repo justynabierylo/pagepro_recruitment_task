@@ -1,8 +1,71 @@
-.c-date-label-dark {
+// TEXT CARDS OR HALF PHOTO HALF TEXT
+.card-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-card__heading, .c-card__article-heading {
     font-family: font(main);
-    font-size: font-size(medium); //czy na pewno?? ma byc 13px
+    font-weight: $weight-bold;
+    font-size: font-size(main);
+    line-height: 20px;
+}
+
+.c-card__heading {
+    text-transform: uppercase;
+    color: color(pink);
+    padding-bottom: $white-space/3;
+
+    @include transition;
+
+    &:hover{
+        color: darken(color(pink), 15%);
+    }
+
+    @include media (mobile) {
+        padding-bottom: $white-space/4;
+    }
+
+    @include media (desktop) {
+        padding-bottom: $white-space/3;
+    }
+}
+
+.c-card__article-heading {
+    color: color(black-1);
+    padding-bottom: $white-space/8; //20px
+}
+
+.c-card__article-text {
+    font-family: font(secondary);
+    font-weight: $weight-regular;
+    color: color(gray-1);
+    padding-bottom: $white-space/8;
+}
+
+.u-text-main {
+    font-size: font-size(main);
+    line-height: 26px;
+}
+
+.c-card__date-label {
+    font-family: font(main);
+    font-size: font-size(medium);
     font-style: oblique;
-    color: color(gray-1); //jest jescze jedna wersja
+    color: color(gray-1);
+    display: flex;
+}
 
+.c-date-label__inner {
+    display: flex;
+    align-items: flex-end;
 
+    .c-date-label__time {
+        padding: 0 5px 0 10px;
+    }
+    .c-date-label__link {
+        padding-left: 5px;
+        text-decoration: underline;
+        font-style: normal;
+    }
 }

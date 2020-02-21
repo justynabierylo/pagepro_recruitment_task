@@ -1,0 +1,74 @@
+
+//PHOTO CARDS - CARDS WITH BACKGROUND PHOTO
+
+#photo-card-1 {
+    background-image: url("/static/img/Image-1@2x.png");
+}
+
+#photo-card-2 {
+    background-image: url("/static/img/Image-2@2x.png");
+}
+
+.c-photo-card {
+    color: color(white);
+    padding: $white-space*3/4 $white-space/2;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    height: 300px;
+    margin-bottom: $white-space;
+
+    @include media(mobile) {
+        padding: $white-space;
+        height: 430px;
+    }
+}
+
+.c-photo-card__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.c-photo-card__heading {
+    font-family: font(main);
+    font-size: font-size(main);
+    font-weight: $weight-bold;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+// .c-photo-card__article-wrap{}
+.c-photo-card__article-heading {
+    font-family: font(main);
+    font-size: font-size(large);
+    font-weight: $weight-bold;
+    line-height: 34px;
+    // padding-bottom: $white-space/8;
+}
+
+.c-photo-card__article-text {
+    font-family: font(main);
+    font-size: font-size(main);
+    font-weight: $weight-regular;
+    line-height: 26px;
+    padding-bottom: $white-space*3/4;
+
+    @include media(mobile) {
+        padding-bottom: $white-space/4;
+    }
+
+    @include media(desktop) {
+        padding-bottom: $white-space*3/4;
+    }
+}
+
+.c-photo-card__date-label {
+    font-family: font(main);
+    font-size: font-size(medium);
+    font-style: oblique;
+    color: #CBD0D3;
+    display: flex;
+}
